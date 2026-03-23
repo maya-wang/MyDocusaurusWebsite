@@ -5,6 +5,9 @@ on:
     branches:
       - main
 
+permissions:
+  contents: write
+  
 jobs:
   build-deploy:
     runs-on: ubuntu-latest
@@ -18,6 +21,7 @@ jobs:
       - name: Clone product docs
         run: |
           git clone https://github.com/maya-wang/TestDocSiteGenerator-2.git
+          git clone https://github.com/maya-wang/TestDocSiteGenerator-2.git docs/TestDocSiteGenerator-2
 
       # 👉 如果有多个 repo，就继续加
       # git clone https://github.com/xxx/product-b docs/product-b
@@ -30,6 +34,12 @@ jobs:
       - name: Build
         run: npm run build
 
+      - name: Setup Git user
+        run: |
+          git config --global user.name "maya-wang"
+          git config --global user.email "maya_wang@163.com"
+
+
       # 5️⃣ 部署
       - name: Deploy
         run: npm run deploy
@@ -37,3 +47,4 @@ jobs:
           GIT_USER: maya-wang
           USE_SSH: false
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GIT_PASS: ${{ secrets.GITHUB_TOKEN }}
