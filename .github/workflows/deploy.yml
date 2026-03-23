@@ -30,6 +30,12 @@ jobs:
       - name: Build
         run: npm run build
 
+      - name: Setup Git user
+        run: |
+          git config --global user.name "maya-wang"
+          git config --global user.email "maya_wang@163.com"
+
+
       # 5️⃣ 部署
       - name: Deploy
         run: npm run deploy
