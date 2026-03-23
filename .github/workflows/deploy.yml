@@ -21,6 +21,7 @@ jobs:
       - name: Clone product docs
         run: |
           git clone https://github.com/maya-wang/TestDocSiteGenerator-2.git
+          git clone https://github.com/maya-wang/TestDocSiteGenerator-2.git docs/TestDocSiteGenerator-2
 
       # 👉 如果有多个 repo，就继续加
       # git clone https://github.com/xxx/product-b docs/product-b
