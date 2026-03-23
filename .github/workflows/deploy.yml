@@ -38,6 +38,10 @@ jobs:
           git config --global user.name "maya-wang"
           git config --global user.email "maya_wang@163.com"
 
+      - name: Use token for git push
+       run: |
+         git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/maya-wang/MyDocusaurusWebsite.git 
+
 
       # 5️⃣ 部署
       - name: Deploy
