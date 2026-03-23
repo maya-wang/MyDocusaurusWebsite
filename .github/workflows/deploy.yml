@@ -1,0 +1,39 @@
+name: Deploy Docusaurus
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1️⃣ 拉当前 repo
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      # 2️⃣ 拉你的文档 repo（关键步骤）
+      - name: Clone product docs
+        run: |
+          git clone https://github.com/maya-wang/TestDocSiteGenerator-2.git
+
+      # 👉 如果有多个 repo，就继续加
+      # git clone https://github.com/xxx/product-b docs/product-b
+
+      # 3️⃣ 安装依赖
+      - name: Install dependencies
+        run: npm install
+
+      # 4️⃣ 构建
+      - name: Build
+        run: npm run build
+
+      # 5️⃣ 部署
+      - name: Deploy
+        run: npm run deploy
+        env:
+          GIT_USER: maya-wang
+          USE_SSH: false
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
