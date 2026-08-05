@@ -10,9 +10,9 @@ import {themes as prismThemes} from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'My Site',
+  title: 'RAGFlow-Demo',
   tagline: 'Dinosaurs are cool',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/favicon.svg',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
   future: {
@@ -30,7 +30,7 @@ const config = {
   organizationName: 'maya-wang', // Usually your GitHub org/user name.
   projectName: 'MyDocusaurusWebsite', // Usually your repo name.
 
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'ignore',
 
   // Even if you don't use internationalization, you can use this field to set
   // useful metadata like html lang. For example, if your site is Chinese, you
@@ -85,7 +85,7 @@ const config = {
         respectPrefersColorScheme: true,
       },
       navbar: {
-        title: 'My Site',
+        title: 'RAGFlow-Demo',
         logo: {
           alt: 'My Site Logo',
           src: 'img/logo.svg',
@@ -97,17 +97,17 @@ const config = {
             position: 'left',
             label: 'Tutorial',
           },
-          {to: '/blog', label: 'Blog', position: 'left'},
+          /**{to: '/blog', label: 'Blog', position: 'left'},
           {
-            href: 'https://github.com/facebook/docusaurus',
+            href: 'https://github.com/maya-wang/MyDocusaurusWebsite',
             label: 'GitHub',
             position: 'right',
-          },
+          },*/
         ],
       },
       footer: {
         style: 'dark',
-        links: [
+        /**links: [
           {
             title: 'Docs',
             items: [
@@ -143,11 +143,11 @@ const config = {
               },
               {
                 label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
+                href: 'https://github.com/maya-wang/MyDocusaurusWebsite',
               },
             ],
           },
-        ],
+        ],*/
         copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
       },
       prism: {
