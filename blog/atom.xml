@@ -6,7 +6,7 @@
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://maya-wang.github.io/MyDocusaurusWebsite/blog"/>
     <subtitle>RAGFlow-Demo Blog</subtitle>
-    <icon>https://maya-wang.github.io/MyDocusaurusWebsite/img/favicon.ico</icon>
+    <icon>https://maya-wang.github.io/MyDocusaurusWebsite/img/favicon.svg</icon>
     <entry>
         <title type="html"><![CDATA[Welcome]]></title>
         <id>https://maya-wang.github.io/MyDocusaurusWebsite/blog/welcome</id>
