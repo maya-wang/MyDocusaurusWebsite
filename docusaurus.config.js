@@ -47,7 +47,7 @@ const config = {
       ({
         docs: {
           sidebarPath: './sidebars.js',
-          path: 'external/docusaurus/docs', 
+          path: 'docs', 
           routeBasePath: 'docs',
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
